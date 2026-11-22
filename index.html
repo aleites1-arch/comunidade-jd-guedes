@@ -396,6 +396,10 @@
       const tr = e.target.closest('tr');
       aplicarStatusLinha(tr, respostas[chave].confirmacao);
       atualizarCards();
+     const [cod, idxM] = chave.split('__');
+      enviarMembroParaPlanilha(cod, Number(idxM));
+    }
+  });
     }
   });
 
